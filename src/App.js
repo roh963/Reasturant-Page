@@ -1,10 +1,11 @@
 import React from 'react'
-
+import Resturent from './component/Resturent.js'
 const App = () => {
   return (
-    <div>
-      hello this is my world
-    </div>
+    <>
+     <Resturent/>
+      
+    </>
   )
 }
 
