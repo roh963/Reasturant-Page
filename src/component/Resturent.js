@@ -8,13 +8,17 @@ import Navbar from './Navbar'
     Menu.map((curElem)=>{
       return curElem.category;
     })
-  )
+  ),"ALL"
  ]
 const Resturent = () => {
     
   const [menuData,setmenuData]= useState(Menu);
   const [menuList,setmenuList]= useState(uniqueList);
   const filterItem= (category)=>{
+    if(category==="ALL"){
+      setmenuData(Menu);
+      return;
+    } 
     const updateList = Menu.filter( (curElem)=>{
        return curElem.category === category;
     });
